@@ -1,3 +1,15 @@
+$color-primary-red:hsl(7, 99%, 70%);
+$color-primary-yellow:hsl(51, 100%, 49%);
+$color-green-dark:hsl(167, 40%, 24%);
+$color-green-light:hsl(168, 34%, 41%);
+$color-primary-blue-dark:hsl(198, 62%, 26%);
+
+$color-blue-dark:hsl(212, 27%, 19%);
+$color-grayish-blue-very-dark:hsl(213, 9%, 39%);
+$color-grayish-blue-dark:hsl(232, 10%, 55%);
+$color-grayish-blue:hsl(210, 4%, 67%);
+$color-White:hsl(0, 0%, 100%);
+
 /* 使用@each 產出css size設定 */
 $spacer: 1rem;
 $spacers: (
