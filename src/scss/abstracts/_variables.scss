@@ -1,0 +1,92 @@
+$color-primary-red:hsl(7, 99%, 70%);
+$color-primary-yellow:hsl(51, 100%, 49%);
+$color-green-dark:hsl(167, 40%, 24%);
+$color-green-light:hsl(168, 34%, 41%);
+$color-primary-blue-dark:hsl(198, 62%, 26%);
+
+$color-blue-dark:hsl(212, 27%, 19%);
+$color-grayish-blue-very-dark:hsl(213, 9%, 39%);
+$color-grayish-blue-dark:hsl(232, 10%, 55%);
+$color-grayish-blue:hsl(210, 4%, 67%);
+$color-White:hsl(0, 0%, 100%);
+
+$mobile: 425px;
+$tablet:426px;
+$notebook:1439px;
+$desktop: 1440px;
+
+/* 使用@each 產出css size設定 */
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: (
+  $spacer * 0.25
+  ),
+  2: (
+  $spacer * 0.5
+  ),
+  3: (
+  $spacer * 0.75
+  ),
+  4: $spacer,
+  5: (
+  $spacer * 1.25
+  ),
+  6: (
+  $spacer * 1.5
+  ),
+  7: (
+  $spacer * 1.75
+  ),
+  8: (
+  $spacer * 2
+  )
+);
+/* 使用@each 產出css spacer設定 */
+%standard-boxshadow {
+  box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
+}
+
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $num, $val in $sizes {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: $val;
+    }
+  }
+}
+
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $num, $val in $spacers {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: $val;
+    }
+    .#{$abbrev}t-#{$num} {
+      #{$prop}-top: $val;
+    }
+    .#{$abbrev}r-#{$num} {
+      #{$prop}-right: $val;
+    }
+    .#{$abbrev}b-#{$num} {
+      #{$prop}-bottom: $val;
+    }
+    .#{$abbrev}l-#{$num} {
+      #{$prop}-left: $val;
+    }
+    .#{$abbrev}x-#{$num} {
+      #{$prop}-left: $val;
+      #{$prop}-right: $val;
+    }
+    .#{$abbrev}y-#{$num} {
+      #{$prop}-top: $val;
+      #{$prop}-bottom: $val;
+    }
+  }
+}

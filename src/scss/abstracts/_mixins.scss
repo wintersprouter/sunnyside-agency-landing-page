@@ -1,0 +1,11 @@
+@mixin pc-width() {
+  @media all and  (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin phone-width() {
+  @media all and (max-width: $mobile) {
+    @content;
+  }
+}
