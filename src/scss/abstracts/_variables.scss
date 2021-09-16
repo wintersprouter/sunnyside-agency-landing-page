@@ -10,7 +10,9 @@ $color-grayish-blue-dark:hsl(232, 10%, 55%);
 $color-grayish-blue:hsl(210, 4%, 67%);
 $color-White:hsl(0, 0%, 100%);
 
-$mobile: 375px;
+$mobile: 425px;
+$tablet:426px;
+$notebook:1439px;
 $desktop: 1440px;
 
 /* 使用@each 產出css size設定 */

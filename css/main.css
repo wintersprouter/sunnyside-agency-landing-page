@@ -918,3 +918,49 @@ header {
     top: 8px; }
   .hamburger::after {
     bottom: 8px; }
+
+@media all and (min-width: 426px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    height: 10vh; }
+  .navbar-brand {
+    grid-column: 2 / 3;
+    margin-left: 0;
+    line-height: 10vh; }
+  .navbar-toggle-label {
+    display: none; }
+  .nav {
+    all: unset;
+    height: 10vh;
+    grid-column: 3 / 4;
+    text-align: center; }
+    .nav-list {
+      height: 100%;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: end;
+      align-items: center;
+      grid-gap: 2rem; }
+    .nav-item {
+      margin: 0;
+      opacity: 1; }
+      .nav-item:first-child {
+        margin-top: 0; }
+      .nav-item:last-child {
+        margin-bottom: 0; }
+    .nav-link {
+      color: white; }
+      .nav-link:hover, .nav-link:checked {
+        display: inline-block;
+        padding: 1rem;
+        font-family: 'Fraunces', sans-serif;
+        color: white;
+        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.178);
+        width: 6em;
+        border-radius: 2em; }
+  .section-header {
+    height: 80vh;
+    background-image: url("../src/images/desktop/image-header.jpg");
+    background-position: bottom; } }
