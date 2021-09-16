@@ -1,14 +1,14 @@
 .section-header {
-  width: 100%;
-  height: 100%;
-  background-image: url(../../images/mobile/image-header.jpg);
+  height: 100vh;
+  background-image: url("../src/images/mobile/image-header.jpg");
+  background-size: cover; 
+  background-position: top; 
+  background-repeat: no-repeat;
 }
 header {
   width: 100vw;
   height: 15vh;
   position: fixed;
-  z-index: 999;
-  background: #267b98;
 }
 .navbar-brand {
   color: $color-White;
@@ -22,7 +22,7 @@ header {
   position: absolute;
   top: 100%;      
   width: 100%;
-  background: wheat;
+  background: $color-White;
   transform-origin: top;
   transition: transform 0.3s ease-out;
   transform: scale(1, 0);
