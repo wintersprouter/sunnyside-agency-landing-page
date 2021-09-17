@@ -814,13 +814,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.main {
+.about {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; }
-  .main-title {
+  .about-title {
     font-family: 'Fraunces', sans-serif;
     color: white;
     text-transform: uppercase;
@@ -828,7 +828,7 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1.5s;
     animation-timing-function: ease-out; }
-  .main-icon {
+  .about-icon {
     position: absolute;
     opacity: 0;
     animation-name: moveInTop;
@@ -838,10 +838,8 @@ body {
     animation-iteration-count: infinite; }
 
 @media all and (min-width: 426px) {
-  .main {
-    top: 20%; }
-    .main-icon {
-      bottom: -200%; } }
+  .about {
+    top: 20%; } }
 
 .d-none {
   display: none; }
