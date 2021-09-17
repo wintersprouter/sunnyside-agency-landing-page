@@ -777,6 +777,29 @@ body {
   background-size: cover;
   background-repeat: no-repeat; }
 
+.main {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .main-title {
+    font-family: 'Fraunces', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1rem; }
+  .main-icon {
+    position: absolute;
+    bottom: -115%;
+    left: 50%;
+    transform: translate(-50%); }
+
+@media all and (min-width: 426px) {
+  .main {
+    top: 20%; }
+    .main-icon {
+      bottom: -200%; } }
+
 .d-none {
   display: none; }
 
@@ -850,7 +873,8 @@ body {
 header {
   width: 100vw;
   height: 15vh;
-  position: fixed; }
+  position: fixed;
+  z-index: 5; }
 
 .navbar-brand {
   color: white;
@@ -961,6 +985,6 @@ header {
         width: 6em;
         border-radius: 2em; }
   .section-header {
-    height: 80vh;
+    height: 90vh;
     background-image: url("../src/images/desktop/image-header.jpg");
     background-position: bottom; } }
