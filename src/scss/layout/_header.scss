@@ -9,6 +9,7 @@ header {
   width: 100vw;
   height: 15vh;
   position: fixed;
+  z-index:5;
 }
 .navbar-brand {
   color: $color-White;
@@ -146,7 +147,7 @@ header {
     }
   }
   .section-header {
-    height: 80vh;
+    height: 90vh;
     background-image: url("../src/images/desktop/image-header.jpg");
     background-position: bottom; 
   }

@@ -9,3 +9,38 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.main {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  &-title {
+    font-family: 'Fraunces', sans-serif;
+    color:$color-White;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+  &-icon {  
+    position: absolute;
+    opacity: 0;
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+}
+
+@include pc-width() {
+  .main {
+    top: 20%;
+    &-icon {  
+      bottom: -200%;
+    }
+  }
+}
