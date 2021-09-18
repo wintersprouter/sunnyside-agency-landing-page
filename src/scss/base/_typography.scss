@@ -104,4 +104,10 @@ body {
   .about {
     top: 20%;
   }
+  .section-client {
+    padding: 10rem 0 9rem 0;
+    &-title {
+      font-size: 1.5rem;
+    }
+  }
 }
