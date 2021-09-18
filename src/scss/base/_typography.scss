@@ -36,6 +36,49 @@ body {
   }
 }
 
+%underline {
+  &:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 0.7em;
+    top: 0.8em;
+    width: 110%;
+    left: - 5%;
+    border-radius: 5em;
+  }
+}
+%action {
+  box-shadow: 0 1rem 2rem rgba($color-grayish-blue, .2);
+  &:before {
+    animation-name: btnHighlight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+  }
+}
+
+.btn {
+  &-photography {
+    position: relative;
+    @extend %underline;
+    &:before {
+      background: rgba($color-primary-red,.3);
+    } 
+  }
+
+  &-graphic {
+    position: relative;
+    @extend %underline;
+    &:before {
+      background: rgba($color-primary-yellow,.3);
+    }  
+  }  
+    &-graphic:checked,&-graphic:hover,&-photography:checked,&-photography:hover {
+      @extend %action
+    }
+  
+}
+
 @include pc-width() {
   .about {
     top: 20%;

@@ -777,6 +777,17 @@ li {
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes btnHighlight {
+  0% {
+    opacity: 1;
+    transform: translateX(-2rem); }
+  80% {
+    opacity: 1;
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 @keyframes moveInTop {
   0% {
     opacity: 1;
@@ -836,6 +847,33 @@ body {
     animation-delay: 1.5s;
     animation-timing-function: ease;
     animation-iteration-count: infinite; }
+
+.btn-photography:before, .btn-graphic:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 0.7em;
+  top: 0.8em;
+  width: 110%;
+  left: -5%;
+  border-radius: 5em; }
+
+.btn-graphic:checked, .btn-graphic:hover, .btn-photography:checked, .btn-photography:hover {
+  box-shadow: 0 1rem 2rem rgba(167, 171, 174, 0.2); }
+  .btn-graphic:checked:before, .btn-graphic:hover:before, .btn-photography:checked:before, .btn-photography:hover:before {
+    animation-name: btnHighlight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
+
+.btn-photography {
+  position: relative; }
+  .btn-photography:before {
+    background: rgba(254, 120, 103, 0.3); }
+
+.btn-graphic {
+  position: relative; }
+  .btn-graphic:before {
+    background: rgba(250, 212, 0, 0.3); }
 
 @media all and (min-width: 426px) {
   .about {
@@ -1029,3 +1067,25 @@ header {
     height: 90vh;
     background-image: url("../src/images/desktop/image-header.jpg");
     background-position: bottom; } }
+
+.service-image {
+  width: 100vw; }
+
+.service-card {
+  text-align: center;
+  background-color: white;
+  padding: 2rem 2rem 3.5rem 2rem; }
+  .service-card-title {
+    font-family: 'Fraunces', sans-serif;
+    color: #23303e; }
+  .service-card-description {
+    line-height: 1.5rem;
+    color: #818498;
+    margin-bottom: 1.5rem; }
+  .service-card-action {
+    font-family: 'Fraunces', sans-serif;
+    text-transform: uppercase;
+    color: #23303e;
+    z-index: 1; }
+    .service-card-action:checked, .service-card-action:hover {
+      font-weight: 900; }

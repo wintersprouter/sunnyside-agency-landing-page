@@ -1,0 +1,31 @@
+.service {
+  &-image {
+    width: 100vw;
+  }
+  &-card {
+    text-align: center;
+    background-color: $color-White;
+    padding: 2rem 2rem 3.5rem 2rem;
+    &-title {
+      font-family: 'Fraunces', sans-serif;
+      color: $color-blue-dark;
+    }
+    &-description {
+      line-height: 1.5rem;
+      color: $color-grayish-blue-dark;
+      margin-bottom: 1.5rem;
+    }
+    &-action {
+      font-family: 'Fraunces', sans-serif;
+      text-transform: uppercase;
+      color: $color-blue-dark;
+      z-index: 1;
+      &:checked,&:hover {
+        font-weight: 900;
+      }
+    }
+    
+  }  
+}
+
+
