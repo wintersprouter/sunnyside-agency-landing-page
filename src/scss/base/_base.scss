@@ -1,0 +1,29 @@
+*,
+* ::after,
+* ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 18px/root:16px */
+  // font-size: 1.125%;
+  font-size: 18px;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+a {
+  text-decoration:none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

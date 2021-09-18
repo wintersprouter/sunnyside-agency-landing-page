@@ -1,0 +1,69 @@
+.project {
+  width: 100vw;
+  &-image {
+    &-mobile {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-desktop {
+      display: none;
+    }
+  }
+  
+  &-card {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    &-text {
+      top: 70%;
+      transform: translateY(-35%); 
+      position: absolute;
+      padding: 1rem;
+    }
+
+    &-title {
+      font-family: 'Fraunces', sans-serif;
+      text-transform: capitalize;
+    }
+
+    &-description {
+      line-height: 1.5rem;
+      color: $color-green-dark;
+    }
+  }
+}
+@include pc-width() {
+  .project {
+    &-wrapper {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+    &-image { 
+      &-mobile {
+        display: none;
+      }
+      &-desktop {
+        all:unset;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow:hidden;
+      }
+    }
+    &-card {
+      &-text {
+        width: 100%;
+        top: 66%;
+        transform: translateY(-33%);
+        padding: 0 2rem;
+      }  
+      &-title {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}

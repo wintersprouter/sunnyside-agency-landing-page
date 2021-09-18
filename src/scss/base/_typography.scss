@@ -1,0 +1,121 @@
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  height: 100%;
+}
+
+.background-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  &-title {
+    font-family: 'Fraunces', sans-serif;
+    color:$color-White;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+  &-icon {  
+    position: absolute;
+    opacity: 0;
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+}
+
+%underline {
+  &:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 0.7em;
+    top: 0.8em;
+    width: 110%;
+    left: - 5%;
+    border-radius: 5em;
+  }
+}
+%action {
+  box-shadow: 0 1rem 2rem rgba($color-grayish-blue, .2);
+  &:before {
+    animation-name: btnHighlight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+  }
+}
+
+.btn {
+  &-photography {
+    position: relative;
+    @extend %underline;
+    &:before {
+      background: rgba($color-primary-red,.3);
+    } 
+  }
+
+  &-graphic {
+    position: relative;
+    @extend %underline;
+    &:before {
+      background: rgba($color-primary-yellow,.3);
+    }  
+  }  
+    &-graphic:checked,&-graphic:hover,&-photography:checked,&-photography:hover {
+      @extend %action
+    }
+  
+}
+.title {
+  &-photography {
+    color: $color-primary-blue-dark;
+  }
+  &-graphic {
+    color: $color-green-dark;
+  }
+}
+
+.section-client {
+  text-align: center;
+  padding: 3rem 0 4rem 0;
+  &-title {
+    font-family: 'Fraunces', sans-serif;
+    color:$color-grayish-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+.section-gallery {
+  width: 100vw;
+  height: 100%;
+}
+.icon {
+  width: 10vw;
+  height: 10vw;
+}
+
+@include pc-width() {
+  .about {
+    top: 20%;
+  }
+  .section-client {
+    padding: 10rem 0 9rem 0;
+    &-title {
+      font-size: 1.5rem;
+    }
+  }
+}

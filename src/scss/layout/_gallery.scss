@@ -1,0 +1,39 @@
+.gallery {
+  &-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  &-image {
+    &-desktop {
+      display: none;
+    }
+    &-mobile {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+@include pc-width() {
+  .gallery {
+    &-wrapper {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+    &-image {
+      &-desktop {
+        all:unset;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      &-mobile {
+        display: none;
+      }
+    }
+  }
+}
