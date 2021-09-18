@@ -78,6 +78,14 @@ body {
     }
   
 }
+.title {
+  &-photography {
+    color: $color-primary-blue-dark;
+  }
+  &-graphic {
+    color: $color-green-dark;
+  }
+}
 
 @include pc-width() {
   .about {
