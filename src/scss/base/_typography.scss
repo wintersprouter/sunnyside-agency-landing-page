@@ -87,8 +87,27 @@ body {
   }
 }
 
+.section-client {
+  text-align: center;
+  padding: 3rem 0 4rem 0;
+  &-title {
+    font-family: 'Fraunces', sans-serif;
+    color:$color-grayish-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+
 @include pc-width() {
   .about {
     top: 20%;
+  }
+  .section-client {
+    padding: 10rem 0 9rem 0;
+    &-title {
+      font-size: 1.5rem;
+    }
   }
 }

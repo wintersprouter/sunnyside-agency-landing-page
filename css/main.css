@@ -881,9 +881,24 @@ body {
 .title-graphic {
   color: #25564b; }
 
+.section-client {
+  text-align: center;
+  padding: 3rem 0 4rem 0; }
+  .section-client-title {
+    font-family: 'Fraunces', sans-serif;
+    color: #a7abae;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    margin-bottom: 3rem; }
+
 @media all and (min-width: 426px) {
   .about {
-    top: 20%; } }
+    top: 20%; }
+  .section-client {
+    padding: 10rem 0 9rem 0; }
+    .section-client-title {
+      font-size: 1.5rem; } }
 
 .d-none {
   display: none; }
@@ -1183,3 +1198,41 @@ header {
     padding: 0 2rem; }
   .project-card-title {
     margin-bottom: 0.8rem; } }
+
+.client-card {
+  width: 100vw;
+  padding: 0 2.5rem; }
+  .client-card-avatar {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    margin: 2rem 0; }
+  .client-card-description {
+    color: #818498;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600; }
+  .client-card-name {
+    font-family: 'Fraunces', sans-serif;
+    color: #5a636c;
+    font-weight: 900;
+    margin-bottom: 1rem; }
+  .client-card-title {
+    color: #a7abae;
+    margin-bottom: 2rem; }
+
+@media all and (min-width: 426px) {
+  .client-wrapper {
+    display: flex;
+    margin: 0 5rem; }
+  .client-card {
+    padding: 0 1.8rem; }
+    .client-card-avatar {
+      width: 7vw;
+      height: 7vw;
+      border-radius: 50%;
+      margin: 2rem 0; }
+    .client-card-description {
+      line-height: 2rem;
+      margin-bottom: 5rem;
+      font-weight: 600; } }
