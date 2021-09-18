@@ -18,6 +18,9 @@ footer {
       color: $color-green-light;
       font-size: 1.2rem;
     }
+    &:checked, &:hover{
+      color: $color-green-dark;
+    }
   }
   .contact {
     display: flex;
@@ -35,4 +38,26 @@ footer {
       color: $color-green-light;
     }
   }
+}
+@include pc-width() {
+  footer {
+    padding: 3rem 15rem 4rem 15rem;
+    .contact {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 5rem 3rem 5rem;
+      &-item {
+        margin-right: 0.5rem;
+        color: $color-green-light;
+        &:last-child {
+          margin-right: 0;
+        }
+      
+        &:checked, &:hover{
+          color: $color-green-dark;
+        }
+      }
+    }
+  }
+
 }

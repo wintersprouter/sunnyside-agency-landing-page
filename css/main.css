@@ -1263,7 +1263,8 @@ header {
   .gallery-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; }
   .gallery-image-desktop {
     all: unset;
     height: 100%;
@@ -1290,6 +1291,8 @@ footer {
     footer .link-item {
       color: #458c7e;
       font-size: 1.2rem; }
+    footer .link:checked, footer .link:hover {
+      color: #25564b; }
   footer .contact {
     display: flex;
     justify-content: space-evenly;
@@ -1300,3 +1303,18 @@ footer {
         color: #25564b; }
   footer .attribution a {
     color: #458c7e; }
+
+@media all and (min-width: 426px) {
+  footer {
+    padding: 3rem 15rem 4rem 15rem; }
+    footer .contact {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 5rem 3rem 5rem; }
+      footer .contact-item {
+        margin-right: 0.5rem;
+        color: #458c7e; }
+        footer .contact-item:last-child {
+          margin-right: 0; }
+        footer .contact-item:checked, footer .contact-item:hover {
+          color: #25564b; } }
