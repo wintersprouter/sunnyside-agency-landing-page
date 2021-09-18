@@ -34,3 +34,36 @@
     }
   }
 }
+@include pc-width() {
+  .project {
+    &-wrapper {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+    &-image { 
+      &-mobile {
+        display: none;
+      }
+      &-desktop {
+        all:unset;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow:hidden;
+      }
+    }
+    &-card {
+      &-text {
+        width: 100%;
+        top: 66%;
+        transform: translateY(-33%);
+        padding: 0 2rem;
+      }  
+      &-title {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}
