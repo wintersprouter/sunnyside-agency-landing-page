@@ -1,0 +1,38 @@
+footer {
+  width: 100vw;
+  text-align: center;
+  background-color:rgba($color-green-light,0.4) ;
+  padding: 3rem 2rem 4rem 2rem;
+  .title {
+    font-weight: 800;
+    font-size: 2rem;
+    color: $color-green-dark;
+    text-transform: lowercase;
+    padding-bottom: 2rem ;
+  }
+  .link {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5rem ;
+    &-item {
+      color: $color-green-light;
+      font-size: 1.2rem;
+    }
+  }
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 2rem 3rem 2rem;
+    &-item {
+      color: $color-green-light;
+      &:checked, &:hover{
+        color: $color-green-dark;
+      }
+    }
+  }
+  .attribution {
+    a {
+      color: $color-green-light;
+    }
+  }
+}
