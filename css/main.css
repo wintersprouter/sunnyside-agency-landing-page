@@ -1068,8 +1068,12 @@ header {
     background-image: url("../src/images/desktop/image-header.jpg");
     background-position: bottom; } }
 
-.service-image {
-  width: 100vw; }
+.service-image-mobile {
+  width: 100vw;
+  height: 100%; }
+
+.service-image-desktop {
+  display: none; }
 
 .service-card {
   text-align: center;
@@ -1089,3 +1093,28 @@ header {
     z-index: 1; }
     .service-card-action:checked, .service-card-action:hover {
       font-weight: 900; }
+
+@media all and (min-width: 426px) {
+  .service-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "transformText transformImage" "standOutImage standOutText"; }
+  .service-image-mobile {
+    all: unset;
+    display: none; }
+  .service-image-desktop {
+    all: unset;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .service-image-transform {
+    all: unset;
+    grid-area: transformImage; }
+  .service-image-stand-out {
+    all: unset;
+    grid-area: standOutImage; }
+  .service-card-transform {
+    grid-area: transformText; }
+  .service-card-stand-out {
+    grid-area: standOutText; } }

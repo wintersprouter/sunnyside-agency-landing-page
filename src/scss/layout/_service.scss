@@ -1,6 +1,10 @@
 .service {
-  &-image {
+  &-image-mobile {
     width: 100vw;
+    height: 100%;
+  }
+  &-image-desktop {
+    display: none;
   }
   &-card {
     text-align: center;
@@ -26,6 +30,47 @@
     }
     
   }  
+}
+@include pc-width() {
+  
+  .service {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas:
+      "transformText transformImage"
+      "standOutImage standOutText";
+    }
+    &-image { 
+      &-mobile {
+        all:unset;
+        display: none;
+      }
+      &-desktop {
+        all:unset;
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+      }
+      &-transform {
+        all:unset;
+        grid-area: transformImage;
+      }
+      &-stand-out {
+        all:unset;
+        grid-area:standOutImage;
+      }
+    }
+    &-card-transform {
+      grid-area: transformText;
+    }
+    &-card-stand-out {
+      grid-area:standOutText;
+    }
+  }
+  
+
 }
 
 
