@@ -1188,14 +1188,13 @@ header {
   .project-image-mobile {
     width: 100vw;
     height: 100%;
-    object-fit: cover; }
+    object-fit: contain; }
   .project-image-desktop {
     display: none; }
   .project-card {
     position: relative;
     text-align: center;
-    margin: 0;
-    height: 100%; }
+    margin-top: -5px; }
     .project-card-text {
       top: 70%;
       transform: translateY(-35%);
@@ -1205,6 +1204,7 @@ header {
       font-family: 'Fraunces', sans-serif;
       text-transform: capitalize; }
     .project-card-description {
+      margin-top: 1rem;
       line-height: 1.5rem;
       color: #25564b; }
 
