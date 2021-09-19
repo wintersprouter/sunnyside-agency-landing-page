@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin pc-xl-width() {
+  @media all and (min-width: $desktop) {
+    @content;
+  }
+}

@@ -86,4 +86,12 @@
   }
 }
 
-
+@include pc-xl-width() {
+  .service {
+    &-card {
+      &-description {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
