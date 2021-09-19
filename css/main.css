@@ -1327,8 +1327,13 @@ footer {
     footer .link-item {
       color: #458c7e;
       font-size: 1.2rem; }
-    footer .link:checked, footer .link:hover {
-      color: #25564b; }
+      footer .link-item:checked, footer .link-item:hover {
+        display: inline-block;
+        color: #25564b;
+        background-color: rgba(255, 255, 255, 0.15);
+        width: 5em;
+        height: 1.3em;
+        border-radius: 2em; }
   footer .contact {
     display: flex;
     justify-content: space-evenly;

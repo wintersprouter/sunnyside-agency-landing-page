@@ -17,10 +17,16 @@ footer {
     &-item {
       color: $color-green-light;
       font-size: 1.2rem;
+      &:checked, &:hover{
+        display: inline-block;
+        color: $color-green-dark;
+        background-color: rgba(255, 255, 255, 0.15);
+        width: 5em;
+        height: 1.3em;
+        border-radius: 2em;
+      }
     }
-    &:checked, &:hover{
-      color: $color-green-dark;
-    }
+    
   }
   .contact {
     display: flex;
