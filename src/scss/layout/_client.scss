@@ -43,5 +43,15 @@
       font-weight: 600;
     }
   }
-  
+}
+@include pc-xl-width() {
+  .client {
+    &-card {
+      width: 100%;
+      padding: 0 1rem;
+      &-description, &-name, &-title {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

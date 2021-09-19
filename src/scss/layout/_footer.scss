@@ -59,5 +59,10 @@ footer {
       }
     }
   }
+}
 
+@include pc-xl-width() {
+  footer {
+    width: 100%;
+  } 
 }

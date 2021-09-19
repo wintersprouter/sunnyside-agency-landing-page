@@ -20,7 +20,7 @@ body {
     font-family: 'Fraunces', sans-serif;
     color:$color-White;
     text-transform: uppercase;
-    letter-spacing: 1rem;
+    letter-spacing: 0.6rem;
     animation-name: moveInLeft;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
@@ -117,5 +117,21 @@ body {
     &-title {
       font-size: 1.5rem;
     }
+  }
+}
+
+@include pc-xl-width() {
+  body {
+    width:80vw;
+    margin: 0 auto;
+  }
+  .about {
+    top: 30%;
+    &-title {
+      font-size:2.5rem;
+    }
+  }
+  .section-gallery {
+    width: 100%;
   }
 }

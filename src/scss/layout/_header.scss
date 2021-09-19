@@ -28,7 +28,6 @@ header {
   transition: transform 0.3s ease-out;
   transform: scale(1, 0);
   clip-path: polygon(7.5% 12%, 7.5% 100%,92.5% 100%,92.5% 0%, 85% 12%);
-  // lt/lb/rb/rt
   &-item {
     margin: 1.5rem 0;
     opacity: 0;
@@ -150,5 +149,18 @@ header {
     height: 90vh;
     background-image: url("../src/images/desktop/image-header.jpg");
     background-position: bottom; 
+  }
+}
+@include pc-xl-width() {
+  header {
+    width: 80vw;
+  }
+  .nav{
+    &-link {
+      font-size: 1.2rem;
+    }
+  }
+  .navbar-brand {
+    font-size: 2rem;
   }
 }

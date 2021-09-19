@@ -67,3 +67,16 @@
     }
   }
 }
+
+@include pc-xl-width() {
+  .project {
+    &-card {
+      &-title {
+        margin-bottom: 1.5rem;
+      }
+      &-description {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
